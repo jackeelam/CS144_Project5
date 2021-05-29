@@ -1,0 +1,31 @@
+[2021-05-27 12:24:28,090] c0fde8a532d5/INFO/locust.main: Run time limit set to 30 seconds
+[2021-05-27 12:24:28,091] c0fde8a532d5/INFO/locust.main: Starting Locust 1.5.3
+[2021-05-27 12:24:28,093] c0fde8a532d5/INFO/locust.runners: Spawning 100 users at the rate 100 users/s (0 users already running)...
+[2021-05-27 12:24:29,495] c0fde8a532d5/INFO/locust.runners: All users spawned: MyUser: 100 (100 total running)
+[2021-05-27 12:24:29,496] c0fde8a532d5/INFO/locust.runners: Resetting stats
+
+[2021-05-27 12:24:57,794] c0fde8a532d5/INFO/locust.main: Time limit reached. Stopping Locust.
+[2021-05-27 12:24:57,794] c0fde8a532d5/INFO/locust.runners: Stopping 100 users
+[2021-05-27 12:24:57,812] c0fde8a532d5/INFO/locust.runners: 100 Users have been stopped, 0 still running
+[2021-05-27 12:24:57,813] c0fde8a532d5/INFO/locust.main: Running teardowns...
+[2021-05-27 12:24:57,815] c0fde8a532d5/INFO/locust.main: Shutting down (exit code 0), bye.
+[2021-05-27 12:24:57,817] c0fde8a532d5/INFO/locust.main: Cleaning up runner...
+ Name                                                          # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+--------------------------------------------------------------------------------------------------------------------------------------------
+ GET /api/posts?username=cs144                                    647     0(0.00%)  |       4       1      37       4  |   22.88    0.00
+ GET /blog/cs144/                                                1222     0(0.00%)  |       4       1      25       4  |   43.21    0.00
+ GET /editor/post?action=list&username=cs144                      647     0(0.00%)  |       3       1      23       3  |   22.88    0.00
+ POST /login                                                        1     0(0.00%)  |       6       6       6       6  |    0.04    0.00
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                      2517     0(0.00%)  |       3       1      37       3  |   89.00    0.00
+
+Response time percentiles (approximated)
+ Type     Name                                                              50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|------------------------------------------------------------|---------|------|------|------|------|------|------|------|------|------|------|------|
+ GET      /api/posts?username=cs144                                           4      4      5      5      6      7      8     12     37     37     37    647
+ GET      /blog/cs144/                                                        4      4      4      5      6      7      9     12     25     25     25   1222
+ GET      /editor/post?action=list&username=cs144                             3      3      3      4      4      5      7      9     24     24     24    647
+ POST     /login                                                              6      6      6      6      6      6      6      6      6      6      6      1
+--------|------------------------------------------------------------|---------|------|------|------|------|------|------|------|------|------|------|------|
+ None     Aggregated                                                          3      4      4      5      6      7      8     11     28     37     37   2517
+
